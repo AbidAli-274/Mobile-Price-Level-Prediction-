@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: red;
+            margin: 0;
+            padding: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h4 {
+            color: #444;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-row label {
+            flex: 1;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .form-row input[type="text"] {
+            flex: 1;
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-columns {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-column {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .form-actions button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #2f3030;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-actions button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .c1{
+          color: #fff;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          size: 40px;
+          margin-top: 50px;
+          align-content: center;
+          margin-bottom: 50px;
+        }
+        .na1{
+          background-color:#464d4b;
+          font-size: 20px;
+          height: 100px;
+          margin-top: 0px;
+          margin-bottom: 50px;
+          padding-top: 0px;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+    </style>
+</head>
+<body>
+  <nav class="na1"><h1 class="c1">Mobile Price Level Prediction</h1></nav>
+    <div>
+      
+      
+      <form action="/predict" method="POST">
+        <div class="form-columns">
+            <div class="form-column">
+                <div class="form-row">
+                    <label for="battery_power">Battery Power (mah):</label>
+                    <input type="text" id="battery_power" name="battery_power">
+                </div>
+    
+                <div class="form-row">
+                    <label for="blue">Bluetooth:</label>
+                    <input type="text" id="blue" name="blue">
+                </div>
+    
+                <div class="form-row">
+                    <label for="clockSpeed">Clock Speed:</label>
+                    <input type="text" id="clockSpeed" name="clock_speed">
+                </div>
+    
+                <div class="form-row">
+                    <label for="dualSim">Dual SIM:</label>
+                    <input type="text" id="dualSim" name="dual_sim">
+                </div>
+    
+                <div class="form-row">
+                    <label for="fc">Front Camera (MP):</label>
+                    <input type="text" id="fc" name="fc">
+                </div>
+    
+                <div class="form-row">
+                    <label for="fourG">4G:</label>
+                    <input type="text" id="fourG" name="four_g">
+                </div>
+    
+                <div class="form-row">
+                    <label for="intMemory">Internal Memory (GB):</label>
+                    <input type="text" id="intMemory" name="int_memory">
+                </div>
+    
+                <div class="form-row">
+                    <label for="mDep">Mobile Depth (cm):</label>
+                    <input type="text" id="mDep" name="m_dep">
+                </div>
+    
+                <div class="form-row">
+                    <label for="mobileWt">Mobile Weight:</label>
+                    <input type="text" id="mobileWt" name="mobile_wt">
+                </div>
+    
+                <div class="form-row">
+                    <label for="nCores">Number of Cores:</label>
+                    <input type="text" id="nCores" name="n_cores">
+                </div>
+            </div>
+    
+            <div class="form-column">
+                <div class="form-row">
+                    <label for="pc">Primary Camera (MP):</label>
+                    <input type="text" id="pc" name="pc">
+                </div>
+    
+                <div class="form-row">
+                    <label for="pxHeight">Pixel Height:</label>
+                    <input type="text" id="pxHeight" name="px_height">
+                </div>
+    
+                <div class="form-row">
+                    <label for="pxWidth">Pixel Width:</label>
+                    <input type="text" id="pxWidth" name="px_width">
+                </div>
+    
+                <div class="form-row">
+                    <label for="ram">RAM (mb):</label>
+                    <input type="text" id="ram" name="ram">
+                </div>
+    
+                <div class="form-row">
+                    <label for="scH">Screen Height (cm):</label>
+                    <input type="text" id="scH" name="sc_h">
+                </div>
+    
+                <div class="form-row">
+                    <label for="scW">Screen Width (cm):</label>
+                    <input type="text" id="scW" name="sc_w">
+                </div>
+    
+                <div class="form-row">
+                    <label for="talkTime">Talk Time:</label>
+                    <input type="text" id="talkTime" name="talk_time">
+                </div>
+    
+                <div class="form-row">
+                    <label for="threeG">3G:</label>
+                    <input type="text" id="threeG" name="three_g">
+                </div>
+    
+                <div class="form-row">
+                    <label for="touchScreen">Touch Screen:</label>
+                    <input type="text" id="touchScreen" name="touch_screen">
+                </div>
+    
+                <div class="form-row">
+                    <label for="wifi">Wi-Fi:</label>
+                    <input type="text" id="wifi" name="wifi">
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-actions">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    
+    </div>
+
+    <br>
+    <h4 align="center"><b>{{ pred }}</b></h4>
+
+
+    
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/init.js"></script>
+</body>
+</html>
